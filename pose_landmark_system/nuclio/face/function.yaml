@@ -1,0 +1,96 @@
+metadata:
+  name: cvat-face-landmarks-13
+  namespace: cvat
+  annotations:
+    name: Face Landmarks 13
+    type: detector
+    spec: |
+      [
+        {
+          "name": "face",
+          "type": "skeleton",
+          "svg": "<line x1=\"80\" y1=\"26\" x2=\"69\" y2=\"21\" data-type=\"edge\" data-node-from=\"1\" data-node-to=\"3\"></line>\n<line x1=\"69\" y1=\"21\" x2=\"58\" y2=\"26\" data-type=\"edge\" data-node-from=\"3\" data-node-to=\"2\"></line>\n<line x1=\"58\" y1=\"26\" x2=\"69\" y2=\"31\" data-type=\"edge\" data-node-from=\"2\" data-node-to=\"4\"></line>\n<line x1=\"69\" y1=\"31\" x2=\"80\" y2=\"26\" data-type=\"edge\" data-node-from=\"4\" data-node-to=\"1\"></line>\n<line x1=\"15\" y1=\"26\" x2=\"26\" y2=\"21\" data-type=\"edge\" data-node-from=\"5\" data-node-to=\"7\"></line>\n<line x1=\"26\" y1=\"21\" x2=\"37\" y2=\"26\" data-type=\"edge\" data-node-from=\"7\" data-node-to=\"6\"></line>\n<line x1=\"37\" y1=\"26\" x2=\"26\" y2=\"31\" data-type=\"edge\" data-node-from=\"6\" data-node-to=\"8\"></line>\n<line x1=\"26\" y1=\"31\" x2=\"15\" y2=\"26\" data-type=\"edge\" data-node-from=\"8\" data-node-to=\"5\"></line>\n<line x1=\"64\" y1=\"82\" x2=\"48\" y2=\"79\" data-type=\"edge\" data-node-from=\"10\" data-node-to=\"12\"></line>\n<line x1=\"48\" y1=\"79\" x2=\"31\" y2=\"82\" data-type=\"edge\" data-node-from=\"12\" data-node-to=\"11\"></line>\n<line x1=\"31\" y1=\"82\" x2=\"48\" y2=\"88\" data-type=\"edge\" data-node-from=\"11\" data-node-to=\"13\"></line>\n<line x1=\"48\" y1=\"88\" x2=\"64\" y2=\"82\" data-type=\"edge\" data-node-from=\"13\" data-node-to=\"10\"></line>\n<line x1=\"48\" y1=\"59\" x2=\"48\" y2=\"79\" data-type=\"edge\" data-node-from=\"9\" data-node-to=\"12\"></line>\n<circle r=\"1\" cx=\"80\" cy=\"26\" data-type=\"element node\" data-element-id=\"1\" data-node-id=\"1\" data-label-name=\"left_eye_outer\"></circle>\n<circle r=\"1\" cx=\"58\" cy=\"26\" data-type=\"element node\" data-element-id=\"2\" data-node-id=\"2\" data-label-name=\"left_eye_inner\"></circle>\n<circle r=\"1\" cx=\"69\" cy=\"21\" data-type=\"element node\" data-element-id=\"3\" data-node-id=\"3\" data-label-name=\"left_eye_upper\"></circle>\n<circle r=\"1\" cx=\"69\" cy=\"31\" data-type=\"element node\" data-element-id=\"4\" data-node-id=\"4\" data-label-name=\"left_eye_lower\"></circle>\n<circle r=\"1\" cx=\"15\" cy=\"26\" data-type=\"element node\" data-element-id=\"5\" data-node-id=\"5\" data-label-name=\"right_eye_outer\"></circle>\n<circle r=\"1\" cx=\"37\" cy=\"26\" data-type=\"element node\" data-element-id=\"6\" data-node-id=\"6\" data-label-name=\"right_eye_inner\"></circle>\n<circle r=\"1\" cx=\"26\" cy=\"21\" data-type=\"element node\" data-element-id=\"7\" data-node-id=\"7\" data-label-name=\"right_eye_upper\"></circle>\n<circle r=\"1\" cx=\"26\" cy=\"31\" data-type=\"element node\" data-element-id=\"8\" data-node-id=\"8\" data-label-name=\"right_eye_lower\"></circle>\n<circle r=\"1\" cx=\"48\" cy=\"59\" data-type=\"element node\" data-element-id=\"9\" data-node-id=\"9\" data-label-name=\"nose_tip\"></circle>\n<circle r=\"1\" cx=\"64\" cy=\"82\" data-type=\"element node\" data-element-id=\"10\" data-node-id=\"10\" data-label-name=\"mouth_left\"></circle>\n<circle r=\"1\" cx=\"31\" cy=\"82\" data-type=\"element node\" data-element-id=\"11\" data-node-id=\"11\" data-label-name=\"mouth_right\"></circle>\n<circle r=\"1\" cx=\"48\" cy=\"79\" data-type=\"element node\" data-element-id=\"12\" data-node-id=\"12\" data-label-name=\"lip_upper\"></circle>\n<circle r=\"1\" cx=\"48\" cy=\"88\" data-type=\"element node\" data-element-id=\"13\" data-node-id=\"13\" data-label-name=\"lip_lower\"></circle>",
+          "sublabels": [
+            {
+              "id": 0,
+              "name": "left_eye_outer",
+              "type": "points"
+            },
+            {
+              "id": 1,
+              "name": "left_eye_inner",
+              "type": "points"
+            },
+            {
+              "id": 2,
+              "name": "left_eye_upper",
+              "type": "points"
+            },
+            {
+              "id": 3,
+              "name": "left_eye_lower",
+              "type": "points"
+            },
+            {
+              "id": 4,
+              "name": "right_eye_outer",
+              "type": "points"
+            },
+            {
+              "id": 5,
+              "name": "right_eye_inner",
+              "type": "points"
+            },
+            {
+              "id": 6,
+              "name": "right_eye_upper",
+              "type": "points"
+            },
+            {
+              "id": 7,
+              "name": "right_eye_lower",
+              "type": "points"
+            },
+            {
+              "id": 8,
+              "name": "nose_tip",
+              "type": "points"
+            },
+            {
+              "id": 9,
+              "name": "mouth_left",
+              "type": "points"
+            },
+            {
+              "id": 10,
+              "name": "mouth_right",
+              "type": "points"
+            },
+            {
+              "id": 11,
+              "name": "lip_upper",
+              "type": "points"
+            },
+            {
+              "id": 12,
+              "name": "lip_lower",
+              "type": "points"
+            }
+          ]
+        }
+      ]
+spec:
+  description: Face detection and 13-point MediaPipe landmark inference
+  runtime: python:3.10
+  handler: main:handler
+  build:
+    image: cvat/face-landmarks-13
+    baseImage: python:3.10-slim
+    commands:
+      - apt-get update && apt-get install -y --no-install-recommends libglib2.0-0 libgl1 libgomp1 && rm -rf /var/lib/apt/lists/*
+      - python -m pip install --no-cache-dir mediapipe==0.10.21
+  triggers:
+    myHttpTrigger:
+      numWorkers: 1
+      kind: http
+  eventTimeout: 120s

@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+.env.*
+!.env.example
+models/*
+!models/.gitkeep
+nuclio/face/assets/*
+!nuclio/face/assets/.gitkeep
+outputs/*
+!outputs/.gitkeep
+datasets/*
+!datasets/README.md
+!datasets/.gitkeep

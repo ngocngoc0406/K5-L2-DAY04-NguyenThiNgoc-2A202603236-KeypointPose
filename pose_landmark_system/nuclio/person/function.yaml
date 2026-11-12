@@ -1,0 +1,118 @@
+metadata:
+  name: cvat-person-coco17
+  namespace: cvat
+  annotations:
+    name: Person Pose COCO-17
+    type: detector
+    spec: |
+      [
+        {
+          "name": "person",
+          "type": "skeleton",
+          "svg": "<line x1=\"61\" y1=\"94\" x2=\"60\" y2=\"73\" data-type=\"edge\" data-node-from=\"16\" data-node-to=\"14\"></line>\n<line x1=\"60\" y1=\"73\" x2=\"58\" y2=\"52\" data-type=\"edge\" data-node-from=\"14\" data-node-to=\"12\"></line>\n<line x1=\"39\" y1=\"94\" x2=\"40\" y2=\"73\" data-type=\"edge\" data-node-from=\"17\" data-node-to=\"15\"></line>\n<line x1=\"40\" y1=\"73\" x2=\"42\" y2=\"52\" data-type=\"edge\" data-node-from=\"15\" data-node-to=\"13\"></line>\n<line x1=\"58\" y1=\"52\" x2=\"42\" y2=\"52\" data-type=\"edge\" data-node-from=\"12\" data-node-to=\"13\"></line>\n<line x1=\"64\" y1=\"22\" x2=\"58\" y2=\"52\" data-type=\"edge\" data-node-from=\"6\" data-node-to=\"12\"></line>\n<line x1=\"36\" y1=\"22\" x2=\"42\" y2=\"52\" data-type=\"edge\" data-node-from=\"7\" data-node-to=\"13\"></line>\n<line x1=\"64\" y1=\"22\" x2=\"36\" y2=\"22\" data-type=\"edge\" data-node-from=\"6\" data-node-to=\"7\"></line>\n<line x1=\"64\" y1=\"22\" x2=\"70\" y2=\"38\" data-type=\"edge\" data-node-from=\"6\" data-node-to=\"8\"></line>\n<line x1=\"36\" y1=\"22\" x2=\"30\" y2=\"38\" data-type=\"edge\" data-node-from=\"7\" data-node-to=\"9\"></line>\n<line x1=\"70\" y1=\"38\" x2=\"73\" y2=\"53\" data-type=\"edge\" data-node-from=\"8\" data-node-to=\"10\"></line>\n<line x1=\"30\" y1=\"38\" x2=\"27\" y2=\"53\" data-type=\"edge\" data-node-from=\"9\" data-node-to=\"11\"></line>\n<line x1=\"53\" y1=\"7\" x2=\"47\" y2=\"7\" data-type=\"edge\" data-node-from=\"2\" data-node-to=\"3\"></line>\n<line x1=\"50\" y1=\"9\" x2=\"53\" y2=\"7\" data-type=\"edge\" data-node-from=\"1\" data-node-to=\"2\"></line>\n<line x1=\"50\" y1=\"9\" x2=\"47\" y2=\"7\" data-type=\"edge\" data-node-from=\"1\" data-node-to=\"3\"></line>\n<line x1=\"53\" y1=\"7\" x2=\"57\" y2=\"9\" data-type=\"edge\" data-node-from=\"2\" data-node-to=\"4\"></line>\n<line x1=\"47\" y1=\"7\" x2=\"43\" y2=\"9\" data-type=\"edge\" data-node-from=\"3\" data-node-to=\"5\"></line>\n<line x1=\"57\" y1=\"9\" x2=\"64\" y2=\"22\" data-type=\"edge\" data-node-from=\"4\" data-node-to=\"6\"></line>\n<line x1=\"43\" y1=\"9\" x2=\"36\" y2=\"22\" data-type=\"edge\" data-node-from=\"5\" data-node-to=\"7\"></line>\n<circle r=\"1\" cx=\"50\" cy=\"9\" data-type=\"element node\" data-element-id=\"1\" data-node-id=\"1\" data-label-name=\"nose\"></circle>\n<circle r=\"1\" cx=\"53\" cy=\"7\" data-type=\"element node\" data-element-id=\"2\" data-node-id=\"2\" data-label-name=\"left_eye\"></circle>\n<circle r=\"1\" cx=\"47\" cy=\"7\" data-type=\"element node\" data-element-id=\"3\" data-node-id=\"3\" data-label-name=\"right_eye\"></circle>\n<circle r=\"1\" cx=\"57\" cy=\"9\" data-type=\"element node\" data-element-id=\"4\" data-node-id=\"4\" data-label-name=\"left_ear\"></circle>\n<circle r=\"1\" cx=\"43\" cy=\"9\" data-type=\"element node\" data-element-id=\"5\" data-node-id=\"5\" data-label-name=\"right_ear\"></circle>\n<circle r=\"1\" cx=\"64\" cy=\"22\" data-type=\"element node\" data-element-id=\"6\" data-node-id=\"6\" data-label-name=\"left_shoulder\"></circle>\n<circle r=\"1\" cx=\"36\" cy=\"22\" data-type=\"element node\" data-element-id=\"7\" data-node-id=\"7\" data-label-name=\"right_shoulder\"></circle>\n<circle r=\"1\" cx=\"70\" cy=\"38\" data-type=\"element node\" data-element-id=\"8\" data-node-id=\"8\" data-label-name=\"left_elbow\"></circle>\n<circle r=\"1\" cx=\"30\" cy=\"38\" data-type=\"element node\" data-element-id=\"9\" data-node-id=\"9\" data-label-name=\"right_elbow\"></circle>\n<circle r=\"1\" cx=\"73\" cy=\"53\" data-type=\"element node\" data-element-id=\"10\" data-node-id=\"10\" data-label-name=\"left_wrist\"></circle>\n<circle r=\"1\" cx=\"27\" cy=\"53\" data-type=\"element node\" data-element-id=\"11\" data-node-id=\"11\" data-label-name=\"right_wrist\"></circle>\n<circle r=\"1\" cx=\"58\" cy=\"52\" data-type=\"element node\" data-element-id=\"12\" data-node-id=\"12\" data-label-name=\"left_hip\"></circle>\n<circle r=\"1\" cx=\"42\" cy=\"52\" data-type=\"element node\" data-element-id=\"13\" data-node-id=\"13\" data-label-name=\"right_hip\"></circle>\n<circle r=\"1\" cx=\"60\" cy=\"73\" data-type=\"element node\" data-element-id=\"14\" data-node-id=\"14\" data-label-name=\"left_knee\"></circle>\n<circle r=\"1\" cx=\"40\" cy=\"73\" data-type=\"element node\" data-element-id=\"15\" data-node-id=\"15\" data-label-name=\"right_knee\"></circle>\n<circle r=\"1\" cx=\"61\" cy=\"94\" data-type=\"element node\" data-element-id=\"16\" data-node-id=\"16\" data-label-name=\"left_ankle\"></circle>\n<circle r=\"1\" cx=\"39\" cy=\"94\" data-type=\"element node\" data-element-id=\"17\" data-node-id=\"17\" data-label-name=\"right_ankle\"></circle>",
+          "sublabels": [
+            {
+              "id": 0,
+              "name": "nose",
+              "type": "points"
+            },
+            {
+              "id": 1,
+              "name": "left_eye",
+              "type": "points"
+            },
+            {
+              "id": 2,
+              "name": "right_eye",
+              "type": "points"
+            },
+            {
+              "id": 3,
+              "name": "left_ear",
+              "type": "points"
+            },
+            {
+              "id": 4,
+              "name": "right_ear",
+              "type": "points"
+            },
+            {
+              "id": 5,
+              "name": "left_shoulder",
+              "type": "points"
+            },
+            {
+              "id": 6,
+              "name": "right_shoulder",
+              "type": "points"
+            },
+            {
+              "id": 7,
+              "name": "left_elbow",
+              "type": "points"
+            },
+            {
+              "id": 8,
+              "name": "right_elbow",
+              "type": "points"
+            },
+            {
+              "id": 9,
+              "name": "left_wrist",
+              "type": "points"
+            },
+            {
+              "id": 10,
+              "name": "right_wrist",
+              "type": "points"
+            },
+            {
+              "id": 11,
+              "name": "left_hip",
+              "type": "points"
+            },
+            {
+              "id": 12,
+              "name": "right_hip",
+              "type": "points"
+            },
+            {
+              "id": 13,
+              "name": "left_knee",
+              "type": "points"
+            },
+            {
+              "id": 14,
+              "name": "right_knee",
+              "type": "points"
+            },
+            {
+              "id": 15,
+              "name": "left_ankle",
+              "type": "points"
+            },
+            {
+              "id": 16,
+              "name": "right_ankle",
+              "type": "points"
+            }
+          ]
+        }
+      ]
+spec:
+  description: COCO-17 adapter for the existing CVAT MMPose HRNet32 function
+  runtime: python:3.10
+  handler: main:handler
+  build:
+    image: cvat/person-pose-coco17-adapter
+    baseImage: python:3.10-slim
+    commands:
+      - python -m pip install --no-cache-dir requests==2.32.3
+  env:
+    - name: CVAT_MMPPOSE_URL
+      value: http://172.17.0.3:8080
+  triggers:
+    myHttpTrigger:
+      numWorkers: 1
+      kind: http
+  eventTimeout: 120s

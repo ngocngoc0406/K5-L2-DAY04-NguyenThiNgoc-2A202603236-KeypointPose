@@ -1,0 +1,22 @@
+metadata:
+  name: cvat-face-landmarks-13
+  namespace: cvat
+  annotations:
+    name: Face Landmarks 13
+    type: detector
+    spec: __CVAT_SPEC__
+spec:
+  description: Face detection and 13-point MediaPipe landmark inference
+  runtime: python:3.10
+  handler: main:handler
+  build:
+    image: cvat/face-landmarks-13
+    baseImage: python:3.10-slim
+    commands:
+      - apt-get update && apt-get install -y --no-install-recommends libglib2.0-0 libgl1 libgomp1 && rm -rf /var/lib/apt/lists/*
+      - python -m pip install --no-cache-dir mediapipe==0.10.21
+  triggers:
+    myHttpTrigger:
+      numWorkers: 1
+      kind: http
+  eventTimeout: 120s

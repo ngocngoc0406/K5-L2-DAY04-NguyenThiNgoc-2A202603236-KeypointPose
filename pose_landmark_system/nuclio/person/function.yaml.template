@@ -1,0 +1,24 @@
+metadata:
+  name: cvat-person-coco17
+  namespace: cvat
+  annotations:
+    name: Person Pose COCO-17
+    type: detector
+    spec: __CVAT_SPEC__
+spec:
+  description: COCO-17 adapter for the existing CVAT MMPose HRNet32 function
+  runtime: python:3.10
+  handler: main:handler
+  build:
+    image: cvat/person-pose-coco17-adapter
+    baseImage: python:3.10-slim
+    commands:
+      - python -m pip install --no-cache-dir requests==2.32.3
+  env:
+    - name: CVAT_MMPPOSE_URL
+      value: __MMPPOSE_URL__
+  triggers:
+    myHttpTrigger:
+      numWorkers: 1
+      kind: http
+  eventTimeout: 120s

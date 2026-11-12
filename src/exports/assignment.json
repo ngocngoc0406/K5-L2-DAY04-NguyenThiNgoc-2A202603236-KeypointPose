@@ -1,0 +1,43 @@
+{
+ "mssv": "2A202603236",
+ "ten": "NguyenThiNgoc",
+ "pool_version": "d04-k5-v2",
+ "cvat_user": "admin",
+ "project": "d04-keypoint",
+ "persons": [
+  "000000177889.jpg",
+  "000000211458.jpg",
+  "000000261732.jpg",
+  "000000294379.jpg",
+  "000000399983.jpg",
+  "000000090646.jpg",
+  "000000122199.jpg",
+  "000000157271.jpg",
+  "000000163118.jpg",
+  "000000515309.jpg",
+  "000000438099.jpg",
+  "000000272026.jpg"
+ ],
+ "faces": [
+  "face_141135.jpg",
+  "face_257657.jpg",
+  "face_362568.jpg",
+  "face_442231.jpg",
+  "face_505385.jpg",
+  "face_196742.jpg",
+  "face_296767.jpg",
+  "face_333134.jpg"
+ ],
+ "tasks": {
+  "persons": {
+   "task_id": 27,
+   "job_id": 27,
+   "task_name": "persons-NguyenThiNgoc"
+  },
+  "faces": {
+   "task_id": 28,
+   "job_id": 28,
+   "task_name": "faces-NguyenThiNgoc"
+  }
+ }
+}
